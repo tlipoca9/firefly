@@ -1,0 +1,22 @@
+run:
+  timeout: 5m
+
+linters-settings:
+  gci:
+    custom-order: true
+    sections:
+      - standard
+      - default
+      - prefix(github.com/tlipoca9/firefly)
+      - blank
+      - dot
+  gofmt:
+    simplify: true
+    rewrite-rules:
+      - pattern: 'interface{}'
+        replacement: 'any'
+
+linters:
+  enable:
+    - gci
+    - gofmt
